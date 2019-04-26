@@ -1,0 +1,236 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+header{
+  z-index: 1000;
+}
+.links {
+    font-size: 1.3rem;
+    padding-left: 2rem;
+
+    @include respond(tab-land) {
+        font-size: 1.2rem;
+    }
+}
+.header {
+    height: 85vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba( #2998ff, .5),
+        rgba( #5643fa, .5)),
+    url(../../assets/hintersee-3601004_1920.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-color: rgba(41, 152, 255, 0.5);
+    z-index: 100;
+
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 95vh;
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba( #2998ff, 0.4),
+            rgba( #5643fa, 0.4)),
+        url(../../assets/hintersee-3601004_1920.jpg);
+    }
+
+    @include respond(tab-land) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+        height: 83vh;
+    }
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        height: 70vh;
+    }
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+.chevRight {
+  font-size: 1rem;
+  padding-left: .4rem;
+}
+.heading-primary {
+    color: #0505a3;
+    text-transform: uppercase;
+    position: relative;
+    // top: 50%;
+    // left: 55%;
+    // transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+        min-width: 10em;
+        margin-top: 3rem;
+    }
+
+    &--developer {
+        color: #ccc;
+        display: block;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        animation: moveInBottom 2s ease-in-out;
+
+        @include respond(phone) {
+            letter-spacing: .3rem !important;
+            font-size: 2rem !important;
+            font-weight: 700 !important;
+        }
+    }
+
+    &--main {
+        display: block;
+        // font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: 1rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+
+        @include respond(phone) {
+            letter-spacing: .3rem !important;
+            font-size: 2.5rem !important;
+            font-weight: 700 !important;
+        }
+        // animation-delay: 3s;
+        // animation-iteration-count: 3;
+    }
+
+    &--sub {
+        display: block;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        animation: moveInRight 2s ease-in-out;
+        color: #ccc;
+
+        @include respond(phone) {
+            letter-spacing: .3rem;
+            font-size: 2rem !important;
+            font-weight: 500 !important;
+        }
+    }
+}
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.needButtonText {
+    font-size: .8rem;
+    height: 3.3rem;
+    letter-spacing: .1rem;
+    color: white !important;
+
+    &--1{
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }
+    &--2{
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @include respond(tab-port) {
+      // margin-top: .8rem;
+      //  font-size: .8rem;
+      //  padding: 5px !important;
+      //  height: 2rem;
+      //  letter-spacing: .07rem;
+      //  max-width: 14rem;
+    }
+}
+.skSocial {
+    padding-top: 4px !important;
+    font-size: 1.2rem !important;
+    &:not(:last-child) {
+        padding-right: 1.2rem !important;
+    }
+
+    &:hover {
+        color: white !important;
+    }
+
+    @include respond(tab-port) {
+        // display: none;
+    }
+}
+.socialLink {
+    color: white !important;
+
+    &:hover {
+        color: lightblue !important;
+    }
+}
+.brandLeft {
+    margin-left: -2rem !important;
+}
+.active {
+    background-color: #2998ff;
+}

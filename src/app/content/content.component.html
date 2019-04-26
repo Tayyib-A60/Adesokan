@@ -1,0 +1,121 @@
+<main class="py-5 mainContent">
+      <section class="about" id="aboutMe">
+          <div class="row">
+              <div class="story">
+                  <figure class="story__shape">
+                      <img src="./assets/tayyib.jpg" alt="Person on a tour" class="story__img">
+                      <figcaption class="story__caption">Adesokan Toyeeb</figcaption>
+                  </figure>
+                  <div class="story__text">
+                      <p>
+                          Hi there, I am Toyeeb, a Software Developer, BlockChain Enthusiast, and a Business Innovator with core visions on revolutionizing the use of Technology to create effective solutions to drive businesses. I have lots of passion for solving problems, learning and educating people about the use of technology. I contribute to the growth of technology by teaching youngsters and also contributes to the global BlockChain Industry by being a part of DLT Africa.
+                          Some of the technologies I've worked with include C# (.Net Core), Entity Framework, Javascript, Angular, HTML/CSS and Sass.
+                          Do you have something interesting for me? Hit me up in the contact section below.
+                      </p>
+                  </div>
+              </div>
+          </div>
+        </section>
+        <section class="aboutDetails" id="skills">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                  <h1 class="heading-primari">Skills and competencies</h1>
+                    <div class="skills">
+                      <ul>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> HTML/CSS </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Javascript </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Angular 2 </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> C# (.Net Core) </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> .Net Unit Testing </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Angular Unit testing </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Sass </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Version control (Git) </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Project Management </span></li>
+                      </ul>
+                  </div>
+              </div>
+               <div class="col-12 col-md-6 col-lg-6">
+                  <h1 class="heading-primari">Certifications</h1>
+                  <div class="skills">
+                      <ul>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> B.Sc Physics </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Project Management Professional (PMP) </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Google Digital Marketing Certificate</span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Elements of AI (University of Helsinki) </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Front-End Web Development (Google/Udacity) </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Risk Assessment Professional</span></li>
+                      </ul>
+                    </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                  <h1 class="heading-primari">Activities/Interests</h1>
+                    <div class="skills">
+                      <ul>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> DLT Africa (Co-facilitator) <a href="http://dltafrica.com" style="text-transform: lowercase;">dltafrica.com</a> </span></li>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Government Blockchain Association (GBA) member </span></li>
+                      </ul>
+                  </div>
+              </div>
+               <div class="col-12 col-md-6 col-lg-6">
+                  <h1 class="heading-primari">Projects</h1>
+                  <div class="skills">
+                      <ul>
+                        <li class="text-uppercase font-weight-bold certList"><i class="fab fa-superpowers skillBullet"></i> <span class="spaceLeft"> Skinero Motors:  <a href="https://skineromotors.azurewebsites.net">skineromotors.com</a> </span></li>
+                      </ul>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-book" id="contact">
+        </section>
+  </main>
+<footer class="page-footer font-small mdb-color indigo pt-4" id="video">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-6 col-xl-6 center">
+              <h1 class="heading-primari center-text" style="color: rgb(187, 182, 181)">Contact me</h1>
+            </div>
+          </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-6 center">
+                  <div class="book center" >
+                  <div class="book__form">
+                      <form class="form" [formGroup]="contact" (ngSubmit)=submitForm()>
+
+                          <div class="form__group">
+                              <input type="text" name="name" class="form__input" placeholder="Full name" formControlName="name" id="name" required>
+                              <label for="name" class="form__label">Full name</label>
+                          </div>
+
+                          <div class="form__group">
+                              <input type="email" name="email" class="form__input" placeholder="Email address" id="email" formControlName="email" required>
+                              <label for="email" class="form__label">Email address</label>
+                          </div>
+                          <div class="form__group">
+                              <textarea type="email" name="message" cols="12" rows="6" class="form__input" placeholder="Your message" id="message" formControlName="message" required></textarea>
+                              <label for="message" class="form__label">Your message</label>
+                          </div>
+
+                          <div class="form__group">
+                              <button class="btnGrow" color="primary" mdbBtn type="submit" rounded="true" mdbWavesEffect [disabled]="!contact.valid">Submit</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+      </div>
+
+          </div>
+          <br>
+
+        </div>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="https://adesokan.me"> Adesokan.com</a>
+        </div>
+
+      </footer>

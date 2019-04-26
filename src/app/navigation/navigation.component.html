@@ -1,0 +1,71 @@
+<header>
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar">
+        <mdb-navbar-brand class="links brandLeft"><a class="navbar-brand" (click)="reset()" href="#intro">Adesokan</a>
+                <!-- <ul class="navbar-nav mr-auto" > -->
+                        <!-- <li class="skSocial"> -->
+                          <a href="http://linkedin.com/in/adesokan-toyeeb-taiwo-8b0038141" class="socialLink nav-item skSocial"><i class="fab fa-linkedin"></i></a>
+                          <a href="https://www.facebook.com/TOYEEBATAT" class="socialLink nav-item skSocial"><i class="fab fa-facebook"></i></a>
+                        <!-- </li> -->
+                        <!-- <br> -->
+                        <!-- <li class="skSocial"> -->
+                          <a href="https://twitter.com/t_adesokan" class="socialLink nav-item skSocial"><i class="fab fa-twitter"></i></a>
+                        <!-- </li> -->
+                        <!-- <li class="skSocial"> -->
+                          <a href="https://www.instagram.com/adesokantayyib/" class="socialLink nav-item skSocial"><i class="fab fa-instagram"></i></a>
+                        <!-- </li> -->
+                        <!-- <li class="skSocial"> -->
+                          <!-- <a href="https://liadi.omotola@gmail.com?compose=new" class="socialLink nav-item skSocial"><i class="fa fa-envelope"></i></a> -->
+                        <!-- </li> -->
+                       <!-- </ul> -->
+
+        </mdb-navbar-brand>
+
+        <links class="links">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" [class.active]="active=='about'">
+                    <a class="nav-link waves-light" (click)="about()" href="#aboutMe"  mdbWavesEffect >
+                      About</a>
+                </li>
+                <li class="nav-item" [class.active]="active=='skills'">
+                    <a class="nav-link waves-light" (click)="skills()"  href="#skills" mdbWavesEffect >
+                      Skills/Certifications</a>
+                </li>
+                <li class="nav-item" [class.active]="active=='contact'">
+                    <a class="nav-link waves-light" (click)="contact()" href="#contact" mdbWavesEffect >
+                      Contact</a>
+                </li>
+                <!-- <li class="nav-item" [class.active]="active=='all'">
+                    <a class="nav-link waves-light" (click)="all()" href="#video" mdbWavesEffect >
+                     All in a clip</a>
+                </li> -->
+                </ul>
+                <!-- <ul class="navbar-nav mr-auto" style="text-align: center">
+                  <li class="skSocial">
+                    <a href="#!" class="socialLink nav-item" routerLinkActive="active"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <br>
+                  <li class="skSocial">
+                    <a href="#!" class="socialLink nav-item"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="skSocial">
+                    <a href="#!" class="socialLink nav-item"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="skSocial">
+                    <a href="#!" class="socialLink nav-item"><i class="fab fa-whatsapp"></i></a>
+                  </li>
+                 </ul> -->
+        </links>
+      </mdb-navbar>
+          <div class="header" id="intro">
+              <div class="header__text-box">
+                  <h1 class="heading-primary text-center">
+                      <span class="heading-primary--main">Adesokan Toyeeb Taiwo</span>
+                      <span class="heading-primary--developer">(Full Stack Developer)</span>
+                      <span class="heading-primary--sub">I Create solutions to</span>
+                      <span class="heading-primary--sub"> suite your needs</span>
+                  </h1>
+                  <a class="needButtonText needButtonText--1" href="#contact" mdbBtn type="button" gradient="blue" rounded="true" mdbWavesEffect style="z-index: 199;">I need a web app <span class="chevRight"><i class="fas fa-chevron-right"></i></span></a>
+                  <a class="needButtonText needButtonText--2" href="#contact" mdbBtn type="button" gradient="blue" rounded="true" mdbWavesEffect style="z-index: 199;">I'm looking to hire <span class="chevRight"><i class="fas fa-chevron-right"></i></span></a>
+                </div>
+          </div>
+</header>
